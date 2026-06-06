@@ -12,22 +12,61 @@ const TERMINAL_LINES = [
 ]
 
 function FloatingTerminal() {
-  const [visibleLines, setVisibleLines] = useState(0)
+  const [completedLines, setCompletedLines] = useState([])
+  const [typingText, setTypingText] = useState('')
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [showSummary, setShowSummary] = useState(false)
   const [cursorVisible, setCursorVisible] = useState(true)
 
+  const timeouts = React.useRef([])
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setVisibleLines(v => {
-        if (v >= TERMINAL_LINES.length) { clearInterval(timer); return v }
-        return v + 1
-      })
-    }, 700)
-    return () => clearInterval(timer)
+    // blink cursor
+    const blink = setInterval(() => setCursorVisible(v => !v), 530)
+    return () => clearInterval(blink)
   }, [])
 
   useEffect(() => {
-    const blink = setInterval(() => setCursorVisible(v => !v), 530)
-    return () => clearInterval(blink)
+    // start typing process
+    if (currentIndex >= TERMINAL_LINES.length) {
+      setShowSummary(true)
+      return
+    }
+
+    const line = TERMINAL_LINES[currentIndex].cmd
+    setTypingText('')
+
+    // type characters one by one
+    for (let i = 0; i <= line.length; i++) {
+      const t = setTimeout(() => {
+        setTypingText(line.slice(0, i))
+        // when finished typing the line
+        if (i === line.length) {
+          // small delay then mark as completed (reveal status)
+          const done = setTimeout(() => {
+            setCompletedLines(prev => [...prev, TERMINAL_LINES[currentIndex]])
+            setCurrentIndex(idx => idx + 1)
+          }, 350)
+          timeouts.current.push(done)
+        }
+      }, i * 40 + 200)
+      timeouts.current.push(t)
+    }
+
+    return () => {
+      // clear timeouts for this render
+      timeouts.current.forEach(t => clearTimeout(t))
+      timeouts.current = []
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex])
+
+  useEffect(() => {
+    return () => {
+      // cleanup on unmount
+      timeouts.current.forEach(t => clearTimeout(t))
+      timeouts.current = []
+    }
   }, [])
 
   return (
@@ -46,22 +85,23 @@ function FloatingTerminal() {
         <div className="hero-terminal__content">
           <div className="hero-terminal__panel hero-terminal__panel--left">
             <div className="hero-terminal__body">
-              {TERMINAL_LINES.slice(0, visibleLines).map((line, i) => (
-                <div key={i} className="hero-terminal__line">
+              {completedLines.map((line, i) => (
+                <div key={`c-${i}`} className="hero-terminal__line">
                   <span className="hero-terminal__prompt">$</span>
                   <span className="hero-terminal__cmd">{line.cmd}</span>
                   <span className="hero-terminal__status" style={{ color: line.color }}>{line.status}</span>
                 </div>
               ))}
 
-              {visibleLines < TERMINAL_LINES.length && (
+              {currentIndex < TERMINAL_LINES.length && (
                 <div className="hero-terminal__line">
                   <span className="hero-terminal__prompt">$</span>
+                  <span className="hero-terminal__cmd">{typingText}</span>
                   <span className={`hero-terminal__cursor ${cursorVisible ? 'hero-terminal__cursor--on' : ''}`}>▋</span>
                 </div>
               )}
 
-              {visibleLines === TERMINAL_LINES.length && (
+              {showSummary && (
                 <div className="hero-terminal__summary">
                   <span className="hero-terminal__summary-status">Apply complete!</span>
                   <span className="hero-terminal__summary-text">Resources: <b>13 added</b>, 0 destroyed.</span>
