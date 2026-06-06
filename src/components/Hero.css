@@ -482,13 +482,23 @@
 
 @media (max-width: 768px) {
   .hero-terminal__content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;   /* ← stack panels */
     gap: 16px;
     padding: 16px;
   }
 
+  /* Left panel: terminal body */
+  .hero-terminal__panel--left {
+    order: 1;
+  }
+
+  /* Right panel: sidecard goes below */
+  .hero-terminal__panel--right {
+    order: 2;
+  }
+
   .hero-terminal__body {
-    min-height: 220px;
+    min-height: 180px;
     padding: 16px;
     font-size: 12px;
     gap: 8px;
@@ -496,13 +506,14 @@
 
   .hero-terminal__line {
     gap: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-size: 12px;
   }
 
   .hero-terminal__sidecard {
     min-height: auto;
     padding: 16px;
+    gap: 14px;
   }
 
   .hero-terminal__side-title {
@@ -515,12 +526,11 @@
   }
 
   .hero-terminal {
-    min-height: 280px;
+    min-height: auto;
   }
 
   .hero-terminal__header {
     padding: 10px 14px;
-    gap: 8px;
   }
 
   .hero-terminal__title {
@@ -533,18 +543,17 @@
 }
 
 @media (max-width: 480px) {
-  .hero__float--card { display: none; }
-  .hero__photo { min-height: 280px; }
-  .hero__stats { padding: 24px 0 36px; }
+  .hero-terminal__wrap {
+    width: 100%;
+  }
 
   .hero-terminal__content {
-    grid-template-columns: 1fr;
     gap: 12px;
     padding: 12px;
   }
 
   .hero-terminal__body {
-    min-height: 200px;
+    min-height: 160px;
     padding: 12px;
     font-size: 11px;
     gap: 6px;
@@ -552,32 +561,28 @@
 
   .hero-terminal__line {
     gap: 6px;
-    margin-bottom: 6px;
-    font-size: 11px;
-  }
-
-  .hero-terminal__prompt {
+    margin-bottom: 4px;
     font-size: 11px;
   }
 
   .hero-terminal__cmd {
-    word-break: break-word;
+    word-break: break-all;   /* ← prevents long commands overflowing */
     white-space: normal;
   }
 
   .hero-terminal__status {
     font-size: 10px;
+    flex-shrink: 0;
   }
 
   .hero-terminal__sidecard {
-    min-height: auto;
     padding: 12px;
     gap: 12px;
   }
 
   .hero-terminal__side-label {
     font-size: 9px;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.12em;
   }
 
   .hero-terminal__side-title {
@@ -595,17 +600,13 @@
 
   .hero-terminal__side-bullet {
     width: 16px;
+    min-width: 16px;
     height: 16px;
     font-size: 10px;
   }
 
-  .hero-terminal {
-    min-height: auto;
-  }
-
   .hero-terminal__header {
     padding: 8px 12px;
-    gap: 6px;
   }
 
   .hdot {
@@ -621,17 +622,13 @@
     font-size: 9px;
   }
 
-  .hero__float--terminal {
-    margin-top: 16px;
-  }
-
-  .hero-terminal__wrap {
-    width: min(100%, 95vw);
-  }
-
   .hero-terminal__summary {
-    gap: 12px;
+    gap: 10px;
     font-size: 11px;
     flex-wrap: wrap;
+  }
+
+  .hero__float--terminal {
+    margin-top: 12px;
   }
 }
