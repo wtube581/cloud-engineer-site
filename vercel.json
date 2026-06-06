@@ -1,7 +1,4 @@
 {
   "version": 3,
-  "installCommand": "npm ci",
-  "build": {
-    "command": "npm run build"
-  }
+  "installCommand": "npm ci"
 }
