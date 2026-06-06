@@ -27,7 +27,7 @@ const STORIES = [
     watchUrl: 'https://www.youtube.com/watch?v=REPLACE_WITH_UMAR_STORY_URL',
     before: 'Hospitality Manager for 7 years. Watched a Cloud Engineering YouTube video at 2 AM and couldn\'t sleep.',
     during: 'The mentor calls kept me from quitting in week 6. We rebuilt my Terraform module from scratch in 40 minutes.',
-    after: 'Three offers in five weeks. Took Barclays because they let me work on Atlas infrastructure on day one.',
+    after: 'Three offers in five weeks. Took Barclays because they let me work on Atlas infrastructure on day one. Big money, but more importantly, big impact.',
   },
   {
     id: 2,
