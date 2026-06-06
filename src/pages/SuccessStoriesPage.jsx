@@ -24,122 +24,86 @@ const STORIES = [
     avatarBg: '#0a2a4a',
     avatarText: 'UF',
     photo: 'Umar Farouk Muftau.png',
-    watchUrl: 'https://www.youtube.com/watch?v=REPLACE_WITH_UMAR_STORY_URL',
-    before: 'Hospitality Manager for 7 years. Watched a Cloud Engineering YouTube video at 2 AM and couldn\'t sleep.',
-    during: 'The mentor calls kept me from quitting in week 6. We rebuilt my Terraform module from scratch in 40 minutes.',
-    after: 'Three offers in five weeks. Took Barclays because they let me work on Atlas infrastructure on day one. Big money, but more importantly, big impact.',
+    watchUrl: 'https://www.youtube.com/watch?v=7M4sBffKjY8',
+    background: 'Umar spent nearly three years working in Tech Support, helping users solve technical issues while building early exposure to IT systems.',
+    challenge: 'He felt stuck in his role with a clear salary ceiling and limited growth opportunities. Although he had started self-learning cloud engineering, he lacked direction, structure, and a clear path to break into the field.',
+    journey: 'Everything shifted after watching a Cloud Engineering video about TechPathway that sparked a strong interest in cloud technologies. He transitioned from random self-learning into a structured program with mentorship and hands-on guidance, which helped him finally understand real-world cloud concepts and stop learning in isolation.',
+    outcome: 'Umar now works as a Cloud Engineer at Barclays, having successfully transitioned from support roles into a global infrastructure environment.',
   },
   {
     id: 2,
-    salary: '$110K',
+    salary: '$115K',
     company: 'Comcast',
     companyColor: '#cc0000',
-    name: 'Sophia Martinez',
+    name: 'Amara N.',
     role: 'DevOps Engineer · Comcast',
-    avatarBg: '#3a1a4a',
-    avatarText: 'SM',
-    photo: 'Sophia Martinez.png',
-    before: 'Civil engineer, burned out on projects that take 5 years to ship. Wanted to build things that deploy in 5 minutes.',
-    during: 'The CI/CD phase clicked everything together. I rebuilt our family business deployment as my project.',
-    after: 'Comcast hired me into a platform team. I ship to prod twice a day now.',
+    avatarBg: '#1a1a2a',
+    avatarText: 'AN',
+    photo: 'Amara Johnson.png',
+    background: 'Amara spent nearly nine years working as an ICU nurse. Although she excelled in her role, the constant pressure and demanding shifts left her exhausted and searching for a different future.',
+    challenge: 'Like many healthcare professionals, she believed her skills wouldn\'t transfer into the tech industry. The idea of starting over felt intimidating.',
+    journey: 'Through mentorship and career coaching, Amara learned how qualities she had developed in nursing — attention to detail, problem-solving, communication, and calmness under pressure — were highly valuable in cloud operations and support environments. She worked through certification studies and technical projects with support from mentors who reviewed her progress and answered questions.',
+    outcome: 'Amara successfully transitioned into a remote role, replacing stressful night shifts with a healthier and more flexible work schedule.',
   },
   {
     id: 3,
-    salary: '$135K',
+    salary: '$133K',
     company: 'VMware',
     companyColor: '#607078',
-    name: 'Michael Chen',
-    role: 'Platform Engineer · VMware',
-    avatarBg: '#1a2a3a',
-    avatarText: 'MC',
+    name: 'Joseph M.',
+    role: 'DevOps Engineer · Comcast',
+    avatarBg: '#1a2a1a',
+    avatarText: 'JM',
     photo: 'Michael Chen.png',
-    before: '10 years in IT support. Could fix anyone\'s laptop but couldn\'t get past the resume screen for cloud roles.',
-    during: 'The architecture reviews changed how I talk about systems. I started sounding like an engineer.',
-    after: 'VMware. Defending design decisions to staff engineers feels normal now.',
+    background: 'After moving from Ghana to Canada, Joseph struggled to gain recognition for his previous education and spent six years working overnight security jobs.',
+    challenge: 'He believed that his immigrant background, lack of Canadian experience, and non-traditional path would prevent him from entering the tech industry.',
+    journey: 'Joseph committed to the training program while continuing to work. Through practical projects, mentorship, and consistent accountability, he gradually built both technical skills and confidence.',
+    outcome: 'Within five months, Joseph transitioned into a remote DevOps role and began attracting recruiter interest for the first time in his career.',
   },
   {
     id: 4,
-    salary: '$128K',
-    company: 'Capital One',
-    companyColor: '#d03027',
-    name: 'Marcus Lee',
-    role: 'Cloud Engineer · Capital One',
-    avatarBg: '#2a1a3a',
-    avatarText: 'ML',
-    photo: 'Marcus Lee.png',
-    before: 'Sysadmin since the on-prem days. Knew I was being left behind every quarterly all-hands.',
-    during: 'Translating my on-prem instincts to AWS-native took 8 weeks. The mentor accelerated it by 6 months.',
-    after: 'Same paycheck doubled. Same kid asking what dad does, finally a clear answer.',
+    salary: '$133K',
+    company: 'MongoDB',
+    companyColor: '#00ed64',
+    name: 'Reyna P.',
+    role: 'DevOps Engineer · Comcast',
+    avatarBg: '#2a1a0a',
+    avatarText: 'RP',
+    photo: 'Priya Nair.png',
+    background: 'Reyna worked in a care home and had very limited technical experience. She considered herself "non-technical" and doubted she could ever build a career in technology.',
+    challenge: 'Learning cloud concepts felt overwhelming at first, and she nearly quit more than once.',
+    journey: 'The supportive learning environment allowed her to ask questions freely without feeling judged. With encouragement from mentors and consistent practice, she gradually gained confidence and developed new skills.',
+    outcome: 'Reyna now works remotely and enjoys greater flexibility, allowing her to be present for her children after school.',
   },
   {
     id: 5,
-    salary: '$138K',
+    salary: '$128K',
     company: 'Shopify',
     companyColor: '#95bf47',
-    name: 'Priya Nair',
-    role: 'Platform Engineer · Shopify',
-    avatarBg: '#1a3a2a',
-    avatarText: 'PN',
-    photo: 'Priya Nair.png',
-    before: 'Product manager who got tired of asking engineers when things would be done. Decided to learn.',
-    during: 'Shopify was a multi-tenant Kubernetes platform. Shipped it. Demoed it. Got hired off it.',
-    after: 'Shopify Platform team. I\'m the PM-turned-engineer who can still talk to PMs.',
+    name: 'Tunde A.',
+    role: 'DevOps Engineer · Comcast',
+    avatarBg: '#1a2a3a',
+    avatarText: 'TA',
+    photo: 'Raj Patel.png',
+    background: 'Tunde spent years working factory jobs and living paycheck to paycheck. Unexpected expenses created constant financial stress for his family.',
+    challenge: 'Like many career changers, he was skeptical about online programs and worried about investing money into something that might not work.',
+    journey: 'Instead of quitting his job, Tunde learned alongside his factory work. Following a structured roadmap, he focused on building skills steadily rather than chasing shortcuts.',
+    outcome: 'Today, Tunde holds two remote positions and has achieved a level of financial security that once seemed out of reach.',
   },
   {
     id: 6,
-    salary: '$123K',
+    salary: '$121K',
     company: 'Twilio',
     companyColor: '#f22f46',
-    name: 'Tomás Hernández',
-    role: 'DevOps Engineer · Twilio',
-    avatarBg: '#3a1a1a',
-    avatarText: 'TH',
+    name: 'Chinedu O.',
+    role: 'Cloud Engineer · Comcast',
+    avatarBg: '#2a1a2a',
+    avatarText: 'CO',
     photo: 'Tomás Hernández.png',
-    before: 'Graphic designer for 9 years. Cloud engineering looked like the opposite — invisible, structural, durable.',
-    during: 'My architecture decks went viral in our cohort Discord.',
-    after: 'Twilio. Building things people don\'t see but everyone depends on.',
-  },
-  {
-    id: 7,
-    salary: '$124K',
-    company: 'Fintech (stealth)',
-    companyColor: '#3b82f6',
-    name: 'Amara Johnson',
-    role: 'AWS Cloud Engineer · Fintech (stealth)',
-    avatarBg: '#1a2a1a',
-    avatarText: 'AJ',
-    photo: 'Amara Johnson.png',
-    before: 'Nursing school dropout. Zero coding background. Saved $1,800 for the program and showed up every day.',
-    during: 'Built a HIPAA-shaped audit tool as my capstone. The mentor connected me to a healthcare-adjacent fintech.',
-    after: 'Running production AWS workloads eight months after I wrote my first Bash script.',
-  },
-  {
-    id: 8,
-    salary: '$142K',
-    company: 'Datadog',
-    companyColor: '#774aa4',
-    name: 'Raj Patel',
-    role: 'SRE · Datadog',
-    avatarBg: '#2a1a3a',
-    avatarText: 'RP',
-    photo: 'Raj Patel.png',
-    before: 'Mechanical engineer at an auto OEM. Wanted to work somewhere code shipped faster than yearly model refreshes.',
-    during: 'The observability phase felt like coming home. SLOs, error budgets, all of it just clicked.',
-    after: 'Datadog. I get paid to think about systems failing.',
-  },
-  {
-    id: 9,
-    salary: '$98K',
-    company: 'Stripe (contract)',
-    companyColor: '#635bff',
-    name: 'Elena Rossi',
-    role: 'Junior DevOps Engineer · Stripe (contract)',
-    avatarBg: '#1a1a3a',
-    avatarText: 'ER',
-    photo: 'Elena Rossi.png',
-    before: 'Recent CS grad — too much theory, no infrastructure experience. Couldn\'t explain what a VPC was.',
-    during: 'Pair-programmed with my mentor every week. The Terraform module library is now my GitHub pinned repo.',
-    after: 'Started as a contractor at Stripe, full-time conversion in 4 months.',
+    background: 'When Chinedu joined the program, he was balancing warehouse night shifts and weekend Uber driving to make ends meet. Having previously invested in an online course that delivered little value, he was skeptical about another career-transition program.',
+    challenge: 'Long working hours were taking a toll on both his health and quality of life. He wanted a sustainable career path but wasn\'t sure whether cloud engineering was realistic for someone with his background.',
+    journey: 'During his first consultation, the focus wasn\'t on selling a dream; it was about understanding his situation and creating a realistic plan. Over the next four months, Chinedu studied consistently while continuing to work. Whenever he faced technical challenges, mentors provided guidance and accountability.',
+    outcome: 'Today, Chinedu works remotely in a cloud-related role, enjoys better work-life balance, and no longer experiences the physical strain that came with his previous jobs.',
   },
 ]
 
@@ -198,19 +162,23 @@ function StoryCard({ story, visible }) {
         <p className="story-card__role">{story.role}</p>
       </div>
 
-      {/* Journey */}
+      {/* Journey — 4-section narrative format */}
       <div className="story-card__journey">
         <div className="story-card__segment">
-          <span className="story-card__seg-label story-card__seg-label--before">↑ Before</span>
-          <p>{story.before}</p>
+          <span className="story-card__seg-label story-card__seg-label--background">// BACKGROUND</span>
+          <p>{story.background}</p>
         </div>
         <div className="story-card__segment">
-          <span className="story-card__seg-label story-card__seg-label--during">↑ During</span>
-          <p>{story.during}</p>
+          <span className="story-card__seg-label story-card__seg-label--challenge">// THE CHALLENGE</span>
+          <p>{story.challenge}</p>
         </div>
         <div className="story-card__segment">
-          <span className="story-card__seg-label story-card__seg-label--after">↑ After</span>
-          <p>{story.after}</p>
+          <span className="story-card__seg-label story-card__seg-label--journey">// THE JOURNEY</span>
+          <p>{story.journey}</p>
+        </div>
+        <div className="story-card__segment">
+          <span className="story-card__seg-label story-card__seg-label--outcome">// THE OUTCOME</span>
+          <p>{story.outcome}</p>
         </div>
       </div>
 
@@ -244,7 +212,6 @@ export default function SuccessStoriesPage() {
       const obs = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            // stagger by column position
             const col = i % 3
             setTimeout(() => {
               setVisibleCards(prev => new Set([...prev, i]))
@@ -347,14 +314,13 @@ export default function SuccessStoriesPage() {
 
             <div className="ss-cta__image-wrap">
               <div className="ss-cta__image-inner">
-                {/* Simulated photo placeholder — replace with <img> when real asset is available */}
-               <div className="about-cta__visual">
-              <img
-                src="/Sarah.png"
-                alt="Sarah H."
-                className="about-cta__photo-img"
-              />
-            </div>
+                <div className="about-cta__visual">
+                  <img
+                    src="/Sarah.png"
+                    alt="Sarah H."
+                    className="about-cta__photo-img"
+                  />
+                </div>
               </div>
             </div>
           </div>

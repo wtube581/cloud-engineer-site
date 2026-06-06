@@ -274,7 +274,7 @@
   color: var(--text-muted);
 }
 
-/* Journey segments */
+/* Journey segments — 4-section narrative */
 .story-card__journey {
   padding: 16px 18px;
   display: flex;
@@ -300,16 +300,18 @@
 .story-card__seg-label {
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-mono, monospace);
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.story-card__seg-label--before { color: var(--text-muted); }
-.story-card__seg-label--during { color: var(--accent-blue); }
-.story-card__seg-label--after  { color: var(--accent-green); }
+/* 4-section colour coding */
+.story-card__seg-label--background { color: var(--text-muted); }
+.story-card__seg-label--challenge  { color: #f87171; }   /* soft red */
+.story-card__seg-label--journey    { color: var(--accent-blue); }
+.story-card__seg-label--outcome    { color: var(--accent-green); }
 
 /* Footer */
 .story-card__footer {
@@ -453,55 +455,7 @@
   color: var(--text-muted);
 }
 
-@media (max-width: 900px) {
-  .ss-stats__inner {
-    justify-content: center;
-    gap: 28px;
-  }
-
-  .ss-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .ss-cta__card {
-    grid-template-columns: 1fr;
-    padding: 48px 32px;
-  }
-
-  .ss-cta__photo-mock {
-    height: 280px;
-  }
-
-  .ss-cta__actions {
-    align-items: stretch;
-  }
-
-  .ss-cta__perks {
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 580px) {
-  .ss-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .story-card__footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .ss-cta__title {
-    font-size: 32px;
-  }
-
-  .ss-cta__photo-mock {
-    height: 240px;
-  }
-}
-
-/* CTA right — photo mock */
+/* CTA right — photo */
 .ss-cta__image-wrap {
   position: relative;
 }
@@ -521,7 +475,6 @@
   padding: 24px;
 }
 
-/* Large decorative initials as stand-in for the photo */
 .ss-cta__photo-mock::before {
   content: 'AJ';
   position: absolute;
@@ -583,7 +536,6 @@
   color: var(--text-muted);
 }
 
-/* Small terminal overlay in photo */
 .ss-cta__photo-terminal {
   position: absolute;
   top: 20px;
@@ -611,10 +563,31 @@
 }
 
 @media (max-width: 900px) {
+  .ss-stats__inner {
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .ss-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .ss-cta__card {
     grid-template-columns: 1fr;
-    gap: 40px;
     padding: 48px 32px;
+    gap: 40px;
+  }
+
+  .ss-cta__photo-mock {
+    height: 280px;
+  }
+
+  .ss-cta__actions {
+    align-items: stretch;
+  }
+
+  .ss-cta__perks {
+    justify-content: flex-start;
   }
 
   .ss-stats__inner {
@@ -633,5 +606,21 @@
 
   .ss-hero__desc br {
     display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .story-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ss-cta__title {
+    font-size: 32px;
+  }
+
+  .ss-cta__photo-mock {
+    height: 240px;
   }
 }

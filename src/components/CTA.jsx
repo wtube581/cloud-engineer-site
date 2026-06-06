@@ -22,7 +22,7 @@ export default function CTA() {
               Your cloud career starts<br />with one command
             </h2>
             <p className="cta-section__desc">
-              Join 2,400+ engineers building real cloud skills with a roadmap, 
+              Join 140+ engineers building real cloud skills with a roadmap, 
               mentors, and a community that has your back.
             </p>
             <div className="cta-section__actions">

@@ -23,7 +23,20 @@ const LINKS = {
   ],
 }
 
-const SOCIAL = ['X', 'GitHub', 'LinkedIn', 'YouTube']
+const SOCIAL = [
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/sholaoluj/',
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/sholaolujobi/',
+  },
+  {
+    label: 'YouTube',
+    href: 'https://www.youtube.com/@TechPathwayy',
+  },
+]
 
 export default function Footer() {
   return (
@@ -61,7 +74,15 @@ export default function Footer() {
           <span>© 2025 TechPathway LLC. All rights reserved.</span>
           <div className="footer__socials">
             {SOCIAL.map(s => (
-              <a key={s} href="#" className="footer__social-link">{s}</a>
+              <a
+                key={s.label}
+                href={s.href}
+                className="footer__social-link"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                {s.label}
+              </a>
             ))}
           </div>
         </div>

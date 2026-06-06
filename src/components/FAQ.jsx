@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: "What happens if I get stuck?",
-    a: "You ask for help and get it — fast. Our Discord community has engineers at every level, and weekly live Q&A sessions let you get unstuck on anything from a broken Terraform config to negotiating a job offer.",
+    a: "You ask for help and get it — fast. Our Slack community has engineers at every level, and weekly live Q&A sessions let you get unstuck on anything from a broken Terraform config to negotiating a job offer.",
   },
 ]
 

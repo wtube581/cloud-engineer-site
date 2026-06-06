@@ -154,7 +154,7 @@ export default function Hero() {
           </p>
 
           <div className="hero__cta">
-            <button className="btn-primary" onClick={() => window.open('https://techpathway.cloud/break-into-tech', '_blank')}>
+            <button className="btn-primary" onClick={() => window.open('https://techpathway.cloud/take-a-quiz', '_blank')}>
               Get Started
             </button>
             <button className="btn-secondary" onClick={() => navigate('/roadmap')}>
@@ -163,14 +163,15 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero__visual">
-          <div className="hero__photo-wrap">
-            <div className="hero__photo">
-              <img src="/Shola.png" alt="Shola" className="hero__photo-img" />
-              <div className="hero__photo-overlay" />
+        <div className="about-founder__photo-wrap">
+              <div className="about-founder__photo">
+                <img
+                  src="/Shola.png"
+                  alt="Shola Olujobi"
+                  className="about-founder__photo-img"
+                />
+              </div>
             </div>
-          </div>
-        </div>
       </div>
 
       {/* Terminal below / overlapping bottom */}

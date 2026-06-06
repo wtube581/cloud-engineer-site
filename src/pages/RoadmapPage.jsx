@@ -252,7 +252,7 @@ export default function RoadmapPage() {
                 Whether it takes 3 months or 12 months, your goal isn't to finish faster. Your goal is to become a Cloud Engineer employers want to hire. Follow the roadmap, build projects, prepare for interviews, and launch your cloud career. Own it.
               </p>
               <div className="roadmap-cta__actions">
-                <button className="roadmap-cta__btn-primary" onClick={() => window.open('https://techpathway.cloud/break-into-tech', '_blank')}>
+                <button className="roadmap-cta__btn-primary" onClick={() => window.open('https://techpathway.cloud/take-a-quiz', '_blank')}>
                   Get Started
                 </button>
                 <button className="roadmap-cta__btn-ghost" onClick={() => navigate('/success-stories')}>
