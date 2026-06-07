@@ -57,7 +57,7 @@ export default function Navbar() {
 
         <div className="navbar__actions">
           {/* <button className="navbar__btn-ghost">Sign in</button> */}
-          <button className="navbar__btn-primary" onClick={() => window.open('https://techpathway.cloud/take-a-quiz', '_blank')}>
+          <button className="navbar__btn-primary" onClick={() => window.open('https://quiz.techpathway.cloud/take-a-quiz', '_blank')}>
             Get Started
           </button>
         </div>

@@ -154,7 +154,7 @@ export default function Hero() {
           </p>
 
           <div className="hero__cta">
-            <button className="btn-primary" onClick={() => window.open('https://techpathway.cloud/take-a-quiz', '_blank')}>
+            <button className="btn-primary" onClick={() => window.open('https://quiz.techpathway.cloud/take-a-quiz', '_blank')}>
               Get Started
             </button>
             <button className="btn-secondary" onClick={() => navigate('/roadmap')}>

@@ -297,7 +297,7 @@ export default function AboutPage() {
               <div className="about-cta__actions">
                 <button
                   className="about-cta__btn-primary"
-                  onClick={() => window.open('https://techpathway.cloud/take-a-quiz', '_blank')}
+                  onClick={() => window.open('https://quiz.techpathway.cloud/take-a-quiz', '_blank')}
                 >
                   Get Started →
                 </button>
