@@ -11,16 +11,16 @@ const LINKS = {
   ],
   Learn: [
     { label: 'Curriculum', to: '/roadmap' },
-    { label: 'Mentorship', to: '/' },
+    // { label: 'Mentorship', to: '/' },
     { label: 'Projects', to: '/roadmap' },
-    { label: 'Community', to: '/' },
+    // { label: 'Community', to: '/' },
   ],
-  Company: [
-    { label: 'Careers', to: '/' },
-    { label: 'Contact', to: '/' },
-    { label: 'Privacy', to: '/' },
-    { label: 'Terms', to: '/' },
-  ],
+  // Company: [
+  //   { label: 'Careers', to: '/' },
+  //   { label: 'Contact', to: '/' },
+  //   { label: 'Privacy', to: '/' },
+  //   { label: 'Terms', to: '/' },
+  // ],
 }
 
 const SOCIAL = [
